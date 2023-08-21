@@ -1,0 +1,5 @@
+**/.eslint*
+**/node_modules
+test
+**/client/dist
+_test.js
