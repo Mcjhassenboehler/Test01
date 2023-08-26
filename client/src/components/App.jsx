@@ -19,20 +19,6 @@ class App extends React.Component {
   handleSearch(username) {
     console.log(`${username} was searched`);
     // TODO
-    // Make the API request using axios
-    axios.post('/api/repos', { username })
-    .then((response) => {
-      // Assuming the response data is an array of repositories
-      const fetchedRepos = response.data;
-
-      // Update the state with the fetched repositories
-      this.setState({
-        repos: fetchedRepos,
-      });
-    })
-    .catch((error) => {
-      console.error('Error fetching repositories:', error);
-    });
   }
 
   render() {

@@ -9,7 +9,14 @@ class Search extends React.Component {
       username: '',
     };
 
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    
   }
+
+  // setState(state) {
+  //   this.state = state;
+  // }
 
   handleChange(e) {
     this.setState({

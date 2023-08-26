@@ -16,14 +16,13 @@ const getReposByUsername = (username, callback) => {
       'Authorization': `token ${config.GITHUB_TOKEN}`,
     },
   };
-
-  axios.get(options.url, { headers: options.headers})
-  .then((response) => {
-    callback(null, response.data)
-  })
-  .catch((err) => {
-    callback(err)
-  })
+  axios.get(options.url, { headers: options.headers })
+    .then(response => {
+      callback(null, response.data);
+    })
+    .catch(error => {
+      callback(error);
+    });
 };
 
 module.exports.getReposByUsername = getReposByUsername;
